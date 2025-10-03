@@ -1,0 +1,100 @@
+body {
+  /* Font family */
+  /**/
+  --font-family-primary: 'Nunito Sans', sans-serif;
+  --font-family-secondary: 'Playfair Display', serif;
+  --font-family-reader: 'Noto Sans Variable', sans-serif;
+
+  /* Layout */
+  /**/
+  --ar-green: #103a3a;
+
+  --button-border-radius: 100px;
+  --button-border-width: 2px;
+  --button-height: 40px;
+
+  --card-border-radius: 16px;
+
+  --dropdown-border-radius: 8px;
+
+  --font-size-small: 12px;
+  --font-size-normal: 14px;
+  --font-size-medium: 16px;
+  --font-size-slightly-large: 20px;
+  --font-size-large: 24px;
+  --font-size-x-large: 32px;
+
+  --tab-padding: 16px;
+
+  /* Colors */
+  /**/
+  /* Fonts */
+  /**/
+  --font-color-primary: #081735;
+  --font-color-secondary: #8f95b2;
+  --font-color-text: #3d3d3d;
+  --font-weight-bold: 600;
+  --font-weight-normal: 300;
+
+  /* Components */
+  /**/
+
+  --badge-danger-bg-color: #c25b41;
+
+  --button-bg-color: #103a3a;
+  --button-bg-color-hover: #0a2b2b;
+  --button-border-color: #103a3a;
+  --button-font-color: #fff;
+  --button-outline-bg-color: transparent;
+  --button-outline-bg-color-hover: #103a3a;
+  --button-outline-font-color: #103a3a;
+  --button-outline-font-color-hover: #ffffff;
+  --button-playback-speed-font-color: #103a3a;
+  --button-group-bg-color: #fafbff;
+  --button-audio-hover: #96aaaa;
+
+  --card-bg-color: #ffffff;
+
+  --dot-bg-full: #081735;
+  --dot-bg: #d9d9d9;
+
+  --dropdown-bg-color: #fff;
+
+  --edition-select-gold: #e7b468;
+  --edition-select-bronze: #c25b41;
+  --edition-select-original: #2b8989;
+  --edition-select-silver: #8f95b2;
+
+  --footer-bg-color: #103a3a;
+  --footer-font-color: #fff;
+
+  --image-bg-color: #d1d5db;
+
+  --main-canvas-bg-color: #f5f2f0;
+
+  --modal-close-bg-color: hsla(0, 0%, 0%, 0.04);
+
+  --nav-item-bg-color: transparent;
+  --nav-item-bg-color-active: hsla(0, 0%, 0%, 0.04);
+  --nav-item-bg-color-hover: hsla(0, 0%, 0%, 0.04);
+  --nav-item-font-color-active: var(--font-color-text);
+  --nav-item-font-color-hover: var(--font-color-text);
+
+  --pagination-font-color: #96aaaa;
+  --pagination-active-page-font-color: #103a3a;
+
+  --rt-transition-show-delay: 0.5s;
+
+  --scrollbar-thumb-bg: rgb(185, 185, 185, 0.7);
+  --scrollbar-thumb-bg-hover: rgb(185, 185, 185, 1);
+  --scrollbar-track-bg: #fafbff;
+  --scrollbar-width: 7px;
+
+  --share-link-bg: #103a3a;
+
+  --tab-border-color: var(--font-color-primary);
+  --tab-color: #8f95b2;
+  --tab-color-active: var(--font-color-primary);
+
+  --toolbar-border-color: #e6e8f0;
+}

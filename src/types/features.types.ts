@@ -1,0 +1,9 @@
+// UPDO: Sync with API
+export enum Feature {
+  AUDIO = 'AUDIO',
+  DECODE = 'DECODE',
+  GROUP_CODES = 'GROUP_CODES',
+  LANGUAGES = 'LANGUAGES',
+  LEVELS = 'LEVELS',
+  USER_UPLOAD = 'USER_UPLOAD',
+}

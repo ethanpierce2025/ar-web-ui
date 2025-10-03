@@ -1,0 +1,20 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '@fontsource-variable/noto-sans';
+@import '@fontsource-variable/noto-serif';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&family=Playfair+Display&display=swap');
+
+body {
+  color: var(--global-font-color);
+  background-color: var(--main-canvas-bg-color);
+  overflow-x: hidden;
+}
+
+.reader {
+  font-family: var(--font-family-reader);
+  font-weight: 300;
+}
+.reader b {
+  font-weight: 500;
+}

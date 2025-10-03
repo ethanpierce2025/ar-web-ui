@@ -1,0 +1,99 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    jest: true,
+    node: true,
+  },
+  extends: [
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/recommended',
+    // 'plugin:react/recommended', // TODO - uncomment and fix issue
+    'plugin:react-hooks/recommended',
+    'prettier',
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2020,
+    sourceType: 'module',
+    tsconfigRootDir: __dirname,
+  },
+  plugins: [
+    '@typescript-eslint/eslint-plugin',
+    'better-styled-components',
+    'import',
+    'sort-destructure-keys',
+    'sort-keys-fix',
+    'prettier',
+  ],
+  rules: {
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        argsIgnorePattern: '^_',
+      },
+    ],
+    'better-styled-components/sort-declarations-alphabetically': 2,
+    eqeqeq: ['error'],
+    'import/newline-after-import': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+      },
+    ],
+    'new-cap': ['error', { capIsNewExceptionPattern: '^@*' }],
+    'no-dupe-class-members': 'error',
+    'no-duplicate-imports': ['error', { includeExports: true }],
+    'no-else-return': 'error',
+    'no-implicit-coercion': 'error',
+    'no-lonely-if': 'error',
+    'no-negated-condition': 'error',
+    'no-new-wrappers': 'error',
+    'no-param-reassign': 'error',
+    'no-unneeded-ternary': 'error',
+    'no-useless-constructor': 'warn',
+    'no-useless-rename': [
+      'error',
+      {
+        ignoreDestructuring: false,
+        ignoreExport: false,
+        ignoreImport: false,
+      },
+    ],
+    'prefer-destructuring': 'error',
+    'prettier/prettier': ['error', { endOfLine: 'auto' }],
+    // 'react/destructuring-assignment': 'error',
+    // 'react/jsx-pascal-case': 'error',
+    'react/no-unescaped-entities': 'off',
+    // 'react/no-unused-state': 'error',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'sort-destructure-keys/sort-destructure-keys': 'error',
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: true,
+        ignoreDeclarationSort: true,
+      },
+    ],
+    'sort-keys-fix/sort-keys-fix': 'error',
+    'sort-vars': 'error',
+    'spaced-comment': 'error',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+};
