@@ -22,6 +22,7 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
       '@shared': path.resolve(__dirname, '../shared'),
+      '@clerk/clerk-react': path.resolve(__dirname, './src/lib/clerk-stubs.ts'),
     },
     preserveSymlinks: true,
   },

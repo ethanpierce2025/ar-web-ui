@@ -17,7 +17,8 @@
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["../shared/*"]
+      "@shared/*": ["../shared/*"],
+      "@clerk/clerk-react": ["./src/lib/clerk-stubs.ts"]
     }
   },
   "include": ["src", "../shared"],
