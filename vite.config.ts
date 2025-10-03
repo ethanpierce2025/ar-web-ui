@@ -21,7 +21,7 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      '@shared': '/tmp/cc-agent/shared',
+      '@shared': path.resolve(__dirname, '../shared'),
     },
     preserveSymlinks: true,
   },

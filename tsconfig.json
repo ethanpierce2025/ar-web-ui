@@ -17,9 +17,9 @@
     "jsx": "react-jsx",
     "paths": {
       "@/*": ["./src/*"],
-      "@shared/*": ["../../shared/*"]
+      "@shared/*": ["../shared/*"]
     }
   },
-  "include": ["src", "../../shared"],
+  "include": ["src", "../shared"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
