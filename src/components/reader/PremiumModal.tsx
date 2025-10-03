@@ -78,13 +78,7 @@ export const PremiumModal: FunctionComponent<PremiumModalProps> = (props) => {
                     </Link>
                   </Button>
                   <p className="font-primary text-[14px] text-center">
-                    Already have a school license?{' '}
-                    <Link
-                      to={routes.signIn.path}
-                      className="underline"
-                    >
-                      Sign in to your account.
-                    </Link>
+                    Already have a school license? Contact your administrator.
                   </p>
                 </div>
               </Dialog.Panel>

@@ -53,28 +53,8 @@ export const ReaderUnauthorized: FunctionComponent<ReaderUnauthorizedProps> = (p
         Submit
       </button>
 
-      <div className="flex items-center mb-4">
-        <div className="flex-1 border-t border-gray-300"></div>
-        <div className="px-4 text-gray-400">or</div>
-        <div className="flex-1 border-t border-gray-300"></div>
-      </div>
-
-      <a
-        href={`${routes.signIn.path}?redirectUrl=${encodeURIComponent(window.location.href)}`}
-        className="w-full text-center border-2 border-[#103A3A] text-[#103A3A] h-[48px] leading-[44px] rounded-full mb-6 hover:bg-[#103A3A] hover:text-white transition-colors block"
-      >
-        Sign In
-      </a>
-
-      <p className="text-[#103A3A]">
-        New to Adaptive Reader? Create a{' '}
-        <a
-          href={`${routes.signUp.path}?redirectUrl=${encodeURIComponent(window.location.href)}`}
-          className="underline hover:text-opacity-80"
-        >
-          free account
-        </a>{' '}
-        to get started.
+      <p className="text-[#103A3A] text-center">
+        Contact your administrator for access.
       </p>
     </div>
   );

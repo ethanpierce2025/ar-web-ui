@@ -9,7 +9,6 @@ import {
   SpeechMarksResponseDto,
 } from '@/types/api.types';
 import { ApiErrors, ApiForbidden, ApiUnauthorized, apiPath, getApiUrl, httpGet } from '@/utils/api-client';
-import { useAuth } from '@clerk/clerk-react';
 import { useMutation, useQuery } from '@tanstack/react-query';
 import { useNavigate } from 'react-router-dom';
 import { queryClient } from './client';
@@ -28,7 +27,7 @@ export function useGetPassage(params: { backgroundRequest?: boolean; editionId?:
   const { backgroundRequest, editionId, position } = params;
 
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
   const navigate = useNavigate();
 
   const queryParams: Partial<GetPassageParams1> | undefined = { editionId, position };
@@ -73,7 +72,7 @@ export function useGetPassage(params: { backgroundRequest?: boolean; editionId?:
 
 export function useGetPassageAudio() {
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
 
   return useMutation<
     GetPassageAudioResult,
@@ -110,7 +109,7 @@ export function useGetPassageAudio() {
 
 export function useDecodePassage() {
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
 
   return useMutation<
     PassageDecodeResponseDto,
@@ -156,7 +155,7 @@ export function useGetAudioOnlyPassage(params: {
   position: number;
 }) {
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
 
   return useQuery<GetPassageResult, ApiErrors>({
     queryKey: queryKeys.passages.getAudioOnlyPassage({
@@ -188,7 +187,7 @@ export function useGetAudioOnlyPassage(params: {
 
 export function useGetAudioOnlyPassageOnDemand() {
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
 
   return useMutation<
     GetPassageAudioResult,
@@ -226,7 +225,7 @@ export function useGetAudioOnlyPassageOnDemand() {
 
 export function useGetPassageSpeechMarks() {
   const { groupCode } = useApp();
-  const { getToken } = useAuth();
+  const getToken = async () => null;
 
   return useMutation<
     SpeechMarksResponseDto,

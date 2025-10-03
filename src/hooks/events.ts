@@ -46,9 +46,5 @@ export type EventProperties = {
 export const useTrackEvent = () => {
   const trackEvent = <T extends Event>(_event: T, _properties?: EventProperties[T]) => {
   };
-
   return trackEvent;
-};
-
-export const useTrackSigIn = () => {
 };

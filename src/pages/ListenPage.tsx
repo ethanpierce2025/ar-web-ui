@@ -19,7 +19,6 @@ import {
 import { routes } from '@/routes/routes';
 import { replaceUrlParams } from '@/utils/api-client';
 import { formatSeconds } from '@/utils/time';
-import { useUser } from '@clerk/clerk-react';
 import { FunctionComponent, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -29,7 +28,7 @@ export const ListenPage: FunctionComponent = () => {
   const navigateToReaderUrl = useNavigateToReaderUrl();
   const { data: publication } = useGetPublication({ publicationSlug, publicationVersion });
   const title = publication?.title ? `${publication?.title} | Adaptive Reader` : undefined;
-  const { isSignedIn } = useUser();
+  const isSignedIn = false;
   const { groupCode } = useApp();
 
   const [audioState, setAudioState] = useState<AudioState>({
@@ -167,7 +166,7 @@ export const ListenPage: FunctionComponent = () => {
         <div className="text-center space-y-4">
           <p>Want to read along, switch levels, or explore more?</p>
           <div className="inline-grid grid-cols-1 gap-2">
-            {isSignedIn || groupCode ? (
+            {groupCode ? (
               <Link to={readerUrl}>
                 <Button className="!font-bold !text-black !bg-white !border !border-gray-300 !rounded-md hover:!bg-gray-100">
                   Open in Reader
@@ -175,11 +174,6 @@ export const ListenPage: FunctionComponent = () => {
               </Link>
             ) : (
               <>
-                <Link to={`${routes.signIn.path}?redirectUrl=${readerUrl}`}>
-                  <Button className="!font-bold !text-black !bg-white !border !border-gray-300 !rounded-md hover:!bg-gray-100">
-                    Sign In
-                  </Button>
-                </Link>
                 <GroupCodeInput
                   editionId={edition?.id ?? 0}
                   onSuccess={() => {

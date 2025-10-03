@@ -44,8 +44,6 @@ export const CatalogPage: FunctionComponent = () => {
     query: { data, isLoading },
   } = useGetPublications();
 
-  const { data: user } = useGetCurrentUser();
-  const isTeacher = user?.role === UserSelectDtoRoleEnum.TEACHER;
   const hasUserUploadFeature = BrowserStorage.hasFeature(Feature.USER_UPLOAD);
 
   const [currentPage, setCurrentPage] = useState(Number(page));
@@ -175,11 +173,11 @@ export const CatalogPage: FunctionComponent = () => {
             <div className="flex flex-col items-center justify-center h-full text-center font-secondary md:mt-[60px] mt-[85px]">
               <div className="mb-4 text-lg">No results found</div>
               <Link
-                to={isTeacher && hasUserUploadFeature ? userUploadLink : requestContentLink}
+                to={requestContentLink}
                 target="_blank"
               >
                 <span className="font-primary font-bold text-[16px] leading-loose hover:underline text-[--share-link-bg]">
-                  {isTeacher && hasUserUploadFeature ? 'My Uploads' : 'Request Content'}
+                  Request Content
                 </span>
               </Link>
             </div>

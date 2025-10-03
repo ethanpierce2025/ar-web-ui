@@ -11,9 +11,7 @@ export type RouteKey =
   | 'readWithoutVersion'
   | 'reader'
   | 'root'
-  | 'selectPassage'
-  | 'signIn'
-  | 'signUp';
+  | 'selectPassage';
 
 export enum UrlKey {
   CATALOG_SEARCH = 'search',
@@ -104,13 +102,5 @@ export const routes: Record<RouteKey, Route> = {
   selectPassage: {
     name: 'Select Passage',
     path: `/listen/:${UrlKey.PUBLICATION_SLUG}/:${UrlKey.PUBLICATION_VERSION}/:${UrlKey.EDITION_SLUG}`,
-  },
-  signIn: {
-    name: 'Sign In',
-    path: '/sign-in',
-  },
-  signUp: {
-    name: 'Sign Up',
-    path: '/sign-up',
   },
 };

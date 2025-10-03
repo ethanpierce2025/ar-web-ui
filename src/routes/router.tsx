@@ -12,8 +12,6 @@ import { ReadPage } from '@/pages/ReadPage';
 import { ReadWithoutVersionPage } from '@/pages/ReadWithoutVersionPage';
 import { ReaderPage } from '@/pages/ReaderPage';
 import { SelectPassagePage } from '@/pages/SelectPassagePage';
-import { SignInPage } from '@/pages/SignInPage';
-import { SignUpPage } from '@/pages/SignUpPage';
 import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { routes } from './routes';
 
@@ -88,14 +86,6 @@ export const AppRouter = () => {
                 element={<Navigate to={routes.notFound.path} />}
               />
             </Route>
-            <Route
-              path={routes.signIn.path}
-              element={<SignInPage />}
-            />
-            <Route
-              path={routes.signUp.path}
-              element={<SignUpPage />}
-            />
           </Routes>
         </GroupCodeProvider>
       </AppProvider>
