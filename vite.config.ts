@@ -23,6 +23,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
       '@shared': path.resolve(__dirname, '../../shared'),
     },
+    preserveSymlinks: true,
   },
   server: {
     port: Number(process.env.PORT),
